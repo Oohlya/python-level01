@@ -47,7 +47,7 @@ b = []
 
 for x in a:
     if x % 2 == 0:
-        x = x * 4
+        x = x / 4
     else:
         x = x * 2
     b.append(x)
