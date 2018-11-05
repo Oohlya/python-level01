@@ -11,6 +11,31 @@
 # Билет считается счастливым, если сумма его первых и последних цифр равны.
 # !!!P.S.: функция не должна НИЧЕГО print'ить
 
+import random
+
+def lucky(*tktnbr):
+    prt1 = tktnbr[0:3]
+    prt2 = tktnbr[3:]
+    sum1 = sum(prt1)    # В этой стороке выдает ошибку TypeError: unsupported operand type(s) for +: 'int' and 'list'
+    sum2 = sum(prt2)
+    if sum1 == sum2:
+        return True
+    else:
+        return False
+
+n = int(6)
+a = []
+
+while n > 0:
+    a.append(random.randint(0, 9))
+    n -= 1
+
+print('Произвольный шестизначный номер билета: ', a)
+
+if lucky(a) == True:        # В этой стороке выдает ошибку TypeError Traceback (most recent call last)
+    print('Ваш билет счастливый!')
+else:
+    print('Ваш билет не является счастливым!')
 
 
 
